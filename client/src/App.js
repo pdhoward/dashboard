@@ -8,11 +8,16 @@ const App = (props) => {
   // React hooks with common state values for all components 
   const [selectedGroup, setSelectedGroup] = useState('All');
   const [groupColour, setGroupColour] = useState('lightgrey');
+  const [visitorCount, setVisitorCount] = useState(0)
 
   //function that will hook into the state to change it 
   function updateBarChart(group, colour) {    
     setSelectedGroup(group);
     setGroupColour(colour);
+  }
+
+  const updateVisitorCount = (cnt) => {
+    setVisitorCount(cnt)
   }
 
   return(
@@ -23,7 +28,8 @@ const App = (props) => {
       <LineChart positionX={35} positionY={4} selectedGroup={selectedGroup} lineColour={groupColour} />
       
     </svg>
-    <TimeChart />
+    {visitorCount}
+    <TimeChart onChangeCount={updateVisitorCount} />
     
     
   </div>

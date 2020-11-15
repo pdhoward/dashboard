@@ -47,9 +47,7 @@ const DonutComponent = (props) => {
 
     //wrapper function for the pie chart to 
     //render slices as ReactJs components
-    const renderSlice = (measure) => {
-        console.log(`render slice clicked`)
-        console.log(measure)
+    const renderSlice = (measure) => {        
         const index = measure.index;
         return(
         <SliceComponent 
@@ -61,9 +59,7 @@ const DonutComponent = (props) => {
             onClickSlice={onClickSlice}/>
         );
     };
-
-    // experiment - fun an timer to change state every 3 seconds
-   
+  
 
     //creation of the pie
     let pieChart = pie().sort(null);
