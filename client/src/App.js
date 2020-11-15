@@ -17,12 +17,15 @@ const App = (props) => {
 
   return(
   <div>
-    <svg viewBox="-2 0 100 100" preserveAspectRatio="xMidYMid meet"> 
+    <svg viewBox="-2 0 100 50" preserveAspectRatio="xMidYMid meet"> 
       <DonutComponent x={15} y={20} onChangeGroup={updateBarChart}/>
       <BarChart positionX={35} positionY={50} width={80} height={100} selectedGroup={selectedGroup} barColour={groupColour}/>
       <LineChart positionX={35} positionY={4} selectedGroup={selectedGroup} lineColour={groupColour} />
+      
     </svg>
     <TimeChart />
+    
+    
   </div>
   );
 
