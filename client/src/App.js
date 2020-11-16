@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DonutComponent from './components/DonutChart/DonutComponent';
 import BarChart from './components/BarChart/BarChart';
 import LineChart from './components/LineChart/LineChart';
-import TimeChart from './components/TimeChart/TimeChart';
+
 const App = (props) => {
 
   // React hooks with common state values for all components 
@@ -27,10 +27,7 @@ const App = (props) => {
       <BarChart positionX={35} positionY={50} width={80} height={100} selectedGroup={selectedGroup} barColour={groupColour}/>
       <LineChart positionX={35} positionY={4} selectedGroup={selectedGroup} lineColour={groupColour} />
       
-    </svg>
-    {visitorCount}
-    <TimeChart onChangeCount={updateVisitorCount} />
-    
+    </svg> 
     
   </div>
   );
