@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { scaleLinear, max, line, select } from 'd3';
-//import { lineChartData } from '../../testData';
 
 const lineTitleTextStyle = {
     fontSize: "8px", 
@@ -118,7 +117,7 @@ const LineChart = (props) =>  {
 
     return(
         <g transform={`translate(${positionX}, ${positionY})`}>
-            <text textAnchor="middle" style={lineSubTitleTextStyle} fill="lightgrey" x={22} y={-2}>Performance 2012</text>
+            <text textAnchor="middle" style={lineSubTitleTextStyle} fill="lightgrey" x={22} y={-2}>Current Month Customer Engagement</text>
             <text textAnchor="middle" style={lineTitleTextStyle} fill="grey" x={22} y={8}>{selectedData[selectedData.length -1].measure}</text>
             <Line xScale={xScale} yScale={yScale} lineColour={lineColour} selectedData={selectedData}/>
             <Dots  xScale={xScale} yScale={yScale} dotsColour={lineColour} selectedData={selectedData} />

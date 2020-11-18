@@ -72,7 +72,7 @@ const BarChart = (props) => {
         textAnchor="start" 
         transform={`scale(1, -1)`}
         style={barTextStyle}>
-        {selectedData[0].group} Sales Breakdown 2012
+        {selectedData[0].group} Messages Served by Top Brands
     </text>);
 
     //d3 function that sizes the bars height according to data range    
