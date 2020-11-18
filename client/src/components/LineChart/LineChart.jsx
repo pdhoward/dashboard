@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { scaleLinear, max, line, select } from 'd3';
-import { lineChartData } from '../../testData';
+//import { lineChartData } from '../../testData';
 
 const lineTitleTextStyle = {
     fontSize: "8px", 
@@ -100,7 +100,7 @@ const Line = (props) => {
 
 const LineChart = (props) =>  {
 
-    const { selectedGroup, lineColour, positionX, positionY } = props;
+    const { lineChartData, selectedGroup, lineColour, positionX, positionY } = props;
     const margin  = {top: 20, right: 10, bottom: 0, left: 50};
     const selectedData = lineChartData.filter((datum) =>  datum.group === selectedGroup);
     const width = 500 - margin.left - margin.right;

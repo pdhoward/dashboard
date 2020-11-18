@@ -53,3 +53,6 @@ useEffect(()=>{
 
   * basic issue
   https://stackoverflow.com/questions/54824036/useeffect-hook-with-socket-io-state-is-not-persistent-in-socket-handlers
+
+  * useEffect and useReducer
+  https://www.robinwieruch.de/react-hooks-fetch-data

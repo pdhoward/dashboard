@@ -3,7 +3,7 @@ import { scaleOrdinal } from "d3-scale";
 import { pie } from "d3-shape";
 import { schemeCategory10 } from 'd3';
 
-import { donutChartData } from '../../testData';
+//import { donutChartData } from '../../testData';
 import SliceComponent from './SliceComponent';
 
 const donutTextStyle = {
@@ -14,7 +14,7 @@ const donutTextStyle = {
 
 const DonutComponent = (props) => {
 
-    const {x, y, onChangeGroup} = props;
+    const {x, y, donutChartData, onChangeGroup} = props;
     
     //react hooks
     const [donutTitle, setDonutTitle] = useState('');

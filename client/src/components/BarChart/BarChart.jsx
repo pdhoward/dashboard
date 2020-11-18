@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { scaleLinear, max, select } from 'd3';
-import { barChartData } from '../../testData';
+//import { barChartData } from '../../testData';
 
 const animateRect = (rectRef, height, colour, countTextRef) => {
     const rect = select(rectRef.current);
@@ -44,13 +44,14 @@ const Bar = (props) => {
 //wrapper function for the bar chart to 
 //render bars as ReactJs components
 const BarChart = (props) => {
-    const { positionX, positionY, height, selectedGroup, barColour } = props;
+    const { positionX, positionY, height, barChartData, selectedGroup, barColour } = props;
 
     const margin = {top: 20, right: 20, bottom: 30, left: 45};
     const barChartHeight = height - margin.top - margin.bottom;
 
     const selectedData = barChartData.filter((datum) =>  datum.group === selectedGroup);
-    
+    console.log(`---------inside of bar chart-------------`)
+    console.log(barChartData)
     //labels that will appear under the bars (Oranges, Apples, etc.)
     const categoriesLabel = selectedData.map((datum, index) => 
     <text 
